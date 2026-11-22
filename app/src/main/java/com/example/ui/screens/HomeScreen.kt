@@ -20,6 +20,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import com.example.ui.components.AdBanner
+import com.example.ui.components.SponsoredPartnersRow
 import com.example.viewmodel.KnowledgeViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -68,6 +70,11 @@ fun HomeScreen(
             contentPadding = PaddingValues(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
+            // AdMob Monetization Banner
+            item {
+                AdBanner()
+            }
+
             // Search Bar Trigger
             item {
                 Surface(
@@ -134,6 +141,11 @@ fun HomeScreen(
                         }
                     }
                 }
+            }
+
+            // Sponsored Corporate Partners & Notable Advertising
+            item {
+                SponsoredPartnersRow(onSponsorClick = {})
             }
 
             // Featured Article Hero Card
